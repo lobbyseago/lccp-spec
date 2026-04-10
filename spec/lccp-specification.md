@@ -227,8 +227,10 @@ then the installation-relative configuration files are:
 
 The user configuration location consists of these candidate files, loaded in this order if present:
 
-1. `~/.config/<app_name>/config.json`
-2. `~/.config/<app_name>/config.toml`
+1. `~/.<app_name>/config.json`
+2. `~/.<app_name>/config.toml`
+
+This user-level directory is application-owned and may contain other application-specific files in addition to configuration.
 
 ### 6.5 Level 5: working directory configuration
 
@@ -455,7 +457,7 @@ Examples of source location values:
 - `/etc/example-app.toml`
 - `/opt/acme/example-app/etc/example-app.json`
 - `/opt/acme/example-app/etc/example-app.toml`
-- `~/.config/example-app/config.toml`
+- `~/.example-app/config.toml`
 - `EXAMPLE_APP_SERVER_HOST`
 - argument 7 of `argv`
 
